@@ -1,0 +1,2 @@
+#!/bin/sh
+amxmlc -output bin/Main.swf -compiler.debug -compiler.source-path=src -compiler.source-path=test test/Main.as 2>&1

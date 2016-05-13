@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+"use strict";
+
+var readline = require('readline');
+
+var rl = readline.createInterface({
+    input: process.stdin
+});
+
+var toLog = null;
+rl.on('line', function(line) {
+    if (toLog) {
+        console.log(toLog + ' ' + line);
+        toLog = null;
+    }
+    else if (line.indexOf(".as:") >= 0) {
+        toLog = line + ":1 ";
+    }
+});
